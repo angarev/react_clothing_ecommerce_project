@@ -4,12 +4,14 @@ import './App.css';
 
 import HomePage from './pages/HomePage';
 import HatsPage from './pages/HatsPage';
+import ShopPage from './pages/ShopPage';
 
 function App() {
     return (
         <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/hats' component={HatsPage} />
+            <Route exact path='/shop' component={ShopPage} />
+            <Route path='/shop/hats' component={HatsPage} />
         </Switch>
     );
 }

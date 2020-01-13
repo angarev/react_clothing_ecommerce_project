@@ -40,14 +40,8 @@ const DirectoryMenu = () => {
     ];
 
     const renderMenuItems = () => {
-        return sections.map(({ id, title, imageUrl, size }) => (
-            <MenuItem
-                key={id}
-                title={title}
-                subtitle='SHOP NOW'
-                imageUrl={imageUrl}
-                size={size}
-            />
+        return sections.map(({ id, ...otherSectionProps }) => (
+            <MenuItem key={id} subtitle='SHOP NOW' {...otherSectionProps} />
         ));
     };
 
