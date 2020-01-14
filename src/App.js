@@ -5,15 +5,19 @@ import './App.scss';
 import HomePage from './pages/HomePage';
 import HatsPage from './pages/HatsPage';
 import ShopPage from './pages/ShopPage';
+import Header from './components/Header';
 
 function App() {
-    return (
-        <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route exact path='/shop' component={ShopPage} />
-            <Route path='/shop/hats' component={HatsPage} />
-        </Switch>
-    );
+	return (
+		<React.Fragment>
+			<Header />
+			<Switch>
+				<Route exact path='/' component={HomePage} />
+				<Route exact path='/shop' component={ShopPage} />
+				<Route path='/shop/hats' component={HatsPage} />
+			</Switch>
+		</React.Fragment>
+	);
 }
 
 export default App;
