@@ -3,6 +3,8 @@ import './SignIn.styles.scss';
 import FormInput from '../FormInput';
 import CustomButton from '../CustomButton';
 
+import { sightInWithGoogle } from '../../firebase/firebase.utils';
+
 class SignIn extends Component {
 	state = {
 		email: '',
@@ -46,7 +48,12 @@ class SignIn extends Component {
 						required
 					/>
 
-					<CustomButton type='submit'>sign In</CustomButton>
+					<div className='sign-in__buttons'>
+						<CustomButton type='submit'>sign In</CustomButton>
+						<CustomButton onClick={sightInWithGoogle} isGoogleSignIn>
+							sign in with Google
+						</CustomButton>
+					</div>
 				</form>
 			</div>
 		);
