@@ -4,8 +4,9 @@ import * as firebase from 'firebase/app';
 // These imports load individual services into the firebase namespace.
 import 'firebase/auth';
 import 'firebase/firestore';
+import { apiKeys } from './apiKeys';
 
-const firebaseConfig = {};
+const firebaseConfig = apiKeys;
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
 	if (!userAuth) return;
